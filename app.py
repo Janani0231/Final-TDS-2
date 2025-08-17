@@ -50,12 +50,6 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="TDS Data Analyst Agent")
 
-# Add a simple health check endpoint
-@app.get("/health")
-async def health_check():
-    """Simple health check endpoint"""
-    return {"status": "healthy", "timestamp": "2024-01-01T00:00:00Z"}
-
 # -------------------- Robust Gemini LLM with fallback --------------------
 from collections import defaultdict
 import time
